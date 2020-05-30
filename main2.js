@@ -21,7 +21,7 @@ var VPlayer = (function() {
     s3.classList.remove('active');
     s1.classList.add('active');
     video.pause();
-    videosrc.setAttribute('src', 'https://sakuramao.cn/video/stream1.mp4');
+    videosrc.setAttribute('src', 'https://app.nihaoconsult.cn/f/70e578901d934d2b8ee3/?raw=1');
     video.load();
     video.play();
     playButton.classList.remove('paused');
@@ -32,7 +32,7 @@ var VPlayer = (function() {
     s3.classList.remove('active');
     s2.classList.add('active');
     video.pause();
-    videosrc.setAttribute('src', 'https://sakuramao.cn/video/stream2.mp4');
+    videosrc.setAttribute('src', 'https://app.nihaoconsult.cn/f/ec980bd8454c45e98c47/?raw=1');
     video.load();
     video.play();
     playButton.classList.remove('paused');
@@ -43,7 +43,7 @@ var VPlayer = (function() {
     s2.classList.remove('active');
     s3.classList.add('active');
     video.pause();
-    videosrc.setAttribute('src', 'https://sakuramao.cn/video/stream3.mp4');
+    videosrc.setAttribute('src', 'https://app.nihaoconsult.cn/f/536ac1d1b6924a34bab3/?raw=1');
     video.load();
     video.play();
     playButton.classList.remove('paused');
@@ -54,7 +54,7 @@ var VPlayer = (function() {
    * Render intro video
    */
   var videosrc = document.getElementById('videosrc');
-  videosrc.setAttribute('src', 'https://sakuramao.cn/video/stream1.mp4');
+  videosrc.setAttribute('src', 'https://app.nihaoconsult.cn/f/70e578901d934d2b8ee3/?raw=1');
   video.load();
   /**
    * Controls → Buttons
