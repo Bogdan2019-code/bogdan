@@ -14,7 +14,7 @@ body{
     font-weight: 400;
 }
 .streamcontainer{
-    background: url(https://s1.ax1x.com/2020/05/09/Yl9aZ9.jpg);
+    background: url(https://s1.ax1x.com/2020/06/03/tdzk8A.jpg);
     padding-top: 100px;
     padding-bottom: 50px;
     background-position: right;
@@ -748,6 +748,9 @@ h1, h2, h3, h4, h5, h6 {
 .titles a:hover{
   color: #fcd667;
 }
+.titles2 a:hover{
+  color: #fcd667;
+}
 
 .navbar-browseicon{
   width: 30px;
@@ -760,7 +763,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logopng{
-  width: 70px;
+  width: 140px;
   height: 70px;
 }
 
@@ -974,7 +977,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logoreg{
-  width: 120px;
+  width: 200px;
   height: 120px;
   padding: 10px;
 }
