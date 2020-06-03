@@ -739,6 +739,12 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   cursor: pointer;
 }
+.titles2 a{
+  color: #fff;
+  padding-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
 .titles a:hover{
   color: #fcd667;
 }
