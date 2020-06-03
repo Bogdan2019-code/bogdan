@@ -322,6 +322,7 @@ nav ul li a {
 
 .tournamentcontainer{
     padding: 2rem;
+	background-image: url(https://s1.ax1x.com/2020/06/03/tdjZuT.jpg);
 }
 
 .tournamentcontainer > ul{
@@ -333,7 +334,8 @@ nav ul li a {
 }
 
 .tournamentcontainer > ul > li{
-    border: 1px solid #E2E2E2;
+	background-color: #ffffff;
+    border: 1px solid #000000;
     border-radius: .5rem;
 }
 
