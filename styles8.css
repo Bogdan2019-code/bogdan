@@ -1,0 +1,983 @@
+html, body {
+    height: 100%;
+  }
+  
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.streamcontainer{
+    background: url(https://www.csgo.com.cn/jpg/170303/10691488525532737.jpg); /*https://s1.ax1x.com/2020/08/04/a0D1pt.jpg*/
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-position: right;
+}
+.stream{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    padding: 8px 8px 0 8px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.logo a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+nav ul {
+    background-color: rgba(0, 0, 0, 0);
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    float: left;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+#slider{
+  display: none;
+}
+@media screen and (max-width: 864px) {
+
+  #slider{
+    
+    display: block;
+    overflow: hidden;
+  }
+
+  #slider figure{
+    border-radius: 8px;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite ease;
+  }
+
+  #slider figure img{
+    width: 20%;
+    float: left;
+  }
+
+  @keyframes slider{
+      0% {
+          left: 0;
+      }
+      20%{
+          left: 0;
+      }
+      25%{
+          left: -100%;
+      }
+      45%{
+          left: -100%;
+      }
+      50%{
+          left: -200%;
+      }
+      70%{
+          left: -200%;
+      }
+      75%{
+          left: -300%;
+      }
+      95%{
+          left: -300%;
+      }
+      100%{
+          left: -400%;
+      }
+  }
+    .stream{
+      display: none;
+    }
+    .logo {
+          padding: 0;
+    }
+
+    .nav-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: #fff;
+          opacity: 0;
+          transition: all 0.2s ease;
+    }
+
+    .nav-wrapper ul {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+    }
+
+    .nav-wrapper ul li {
+          display: block;
+          float: none;
+          width: 100%;
+          text-align: right;
+          margin-bottom: 10px;
+    }
+
+    .nav-wrapper ul li:nth-child(1) a {
+          transition-delay: 0.2s;
+    }
+
+    .nav-wrapper ul li:nth-child(2) a {
+          transition-delay: 0.3s;
+    }
+
+    .nav-wrapper ul li:nth-child(3) a {
+          transition-delay: 0.4s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+          margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+          padding: 10px 24px;
+          opacity: 0;
+          color: #000;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 1.2px;
+          transform: translateX(-20px);
+          transition: all 0.2s ease;
+    }
+
+    .nav-btn {
+          position: fixed;
+          right: 5px;
+          top: 25px;
+          display: block;
+          width: 60px;
+          height: 60px;
+          cursor: pointer;
+          z-index: 9999;
+          border-radius: 50%;
+    }
+
+    .nav-btn i {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: #666;
+          border-radius: 2px;
+          margin-left: 14px;
+    }
+    .header-icon > use > svg{
+      fill: #000;
+    }
+
+    .nav-btn i:nth-child(1) {
+          margin-top: 16px;
+    }
+
+    .nav-btn i:nth-child(2) {
+          margin-top: 4px;
+          opacity: 1;
+    }
+
+    .nav-btn i:nth-child(3) {
+          margin-top: 4px;
+    }
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: #000;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+/*GAMES SECTION*/
+.gamecontainer{
+    background-color: #f2f5f6;
+    padding-bottom: 8px;
+}
+.row1games,
+.row2games{
+    padding: 1px;
+    margin: 1px; 
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.game1,
+.game2,
+.game3,
+.game4,
+.game5,
+.game6,
+.game7,
+.game8{
+    cursor: pointer;
+    background-color: #fff;
+    height: 290px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 5px 5px 0px 5px;
+}
+
+.game-Name{
+    left: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info{
+    
+    font-size: 18px;
+    margin: 0;
+    color: rgb(73, 73, 73);
+}
+
+/*END OF GAMES SECTION*/
+
+.tourbutton{
+    background-color: #fcd667;
+    text-decoration: none;
+    color: #666666;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+}
+.tourbutton:hover{
+    opacity: .6;
+}
+
+.tournamentcontainer{
+    padding: 2rem;
+	background-image: url(https://www.csgo.com.cn/jpg/170303/10691488525527588.jpg); /*https://s1.ax1x.com/2020/06/03/tdjZuT.jpg*/
+}
+
+.tournamentcontainer > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.tournamentcontainer > ul > li{
+	background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: .5rem;
+}
+
+.tournamentcontainer > ul > li > figure{
+    max-height: 220px;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+    margin: 0;
+}
+
+.tournamentcontainer > ul > li > figure > img{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tournamentcontainer > ul > li > p{
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+}
+
+.tournamentcontainer > ul > li > a{
+    padding: .5rem 1rem;
+    margin: .5rem;
+}
+/*END OF TOURNAMENTS SECTION*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #272727;
+}
+
+.footerlist{ 
+  color: #b2b2ab;
+    list-style: none;
+}
+.footerlist a{
+  color: #b2b2ab;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footerlist a:hover{
+  color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+    font-weight: normal;
+    margin-bottom: .2em;
+  }
+  
+  footer {
+    margin-top: 1em;
+  }
+  .player {
+    position: relative;
+    width: 640px;
+    height: 356px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .player:-ms-fullscreen  {
+    width:100%;
+    height: 100%;
+  }
+  
+  .player button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+  }
+  
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+  
+  }
+  
+  video::-webkit-media-controls {
+    display: none;
+  }
+  
+  video::-webkit-media-controls-enclosure {
+    display: none;
+  }
+  
+  /* ==========================================================================
+     Controls: Play/Pause button
+     ========================================================================== */
+  
+  .controls {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity .25s ease-out;
+    z-index: 2147483647; /* to show in fullscreen mode */
+  }
+  
+  .controls .play {
+    position: relative;
+    width: 65px;
+    height: 40px;
+    margin-right: 10px;
+    background: rgba(23, 35, 34, .75);
+    color: #fff;
+    border-radius: 5px;
+    transition: opacity .25s ease-out, background-color .05s, color .05s;
+  }
+  
+  .controls .play:hover,
+  .controls .play:focus {
+    background-color: #fcd667;
+  }
+  
+  .controls .play-icon,
+  .controls .pause-icon,
+  .controls .replay-icon {
+    margin-top: 3px;
+    padding-left: 2px;
+  }
+  
+  .controls .play.paused .pause-icon,
+  .controls .play.paused .replay-icon {
+    display: none;
+  }
+  
+  .controls .play.playing .play-icon,
+  .controls .play.playing .replay-icon {
+    display: none;
+  }
+  
+  .controls .play.ended .play-icon,
+  .controls .play.ended .pause-icon {
+    display: none;
+  }
+  
+  /* ==========================================================================
+     Controls: Progress bar
+     ========================================================================== */
+  
+  .controls .play-bar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    height: 32px;
+    padding: 10px;
+    background-color: rgba(23, 35, 34, .75);
+    border-radius: 2px;
+  }
+  
+  .controls .progress {
+    position: relative;
+    flex: 1;
+  
+  }
+  
+  
+  /* ==========================================================================
+     Controls: Progress bar → Timestamp tooltips
+     ========================================================================== */
+  
+  .controls .ghost-timecode,
+  .controls .timecode {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -23px 0 0 -12px;
+    opacity: 0;
+    transition: opacity .25s ease-out;
+    pointer-events: none;
+  }
+  
+  .controls .ghost-timecode span,
+  .controls .timecode span {
+    position: relative;
+    left: -50%;
+    padding: 2px 4px;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+    border-radius: 2px;
+  }
+  
+  .controls .ghost-timecode span::before,
+  .controls .timecode span::before {
+    bottom: -4px;
+    margin-left: -20px;
+  }
+  
+  .controls .ghost-timecode span::after,
+  .controls .ghost-timecode span::before,
+  .controls .timecode span::after,
+  .controls .timecode span::before {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -3px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid transparent;
+    content: "";
+  }
+  
+  .controls .ghost-timecode {
+    margin-left: 0;
+  }
+  
+  .controls .ghost-timecode span::after {
+    border-top-color: rgba(23, 35, 34, .85);
+  }
+  
+  .controls .ghost-timecode span {
+    background: rgba(23, 35, 34, .85);
+    color: #fff;
+  }
+  
+  .controls .timecode span {
+    background: #fff;
+    color: #000;
+    margin-left: 23px;
+  }
+  
+  .controls .timecode span::after {
+    border-top-color: #fff;
+  }
+  
+  /* ==========================================================================
+     Controls: Volume
+     ========================================================================== */
+  
+  .controls .volume {
+    position: relative;
+    width: 24px;
+    height: 100%;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  
+  .controls .volume > div {
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 12px;
+    bottom: 0;
+    left: 0;
+    background-color: #fcd667;
+  }
+  
+  .controls .volume > div.fill-0 {
+    background-color: #666;
+  }
+  
+  .controls .volume > div.fill-1 {
+    box-shadow: inset -2px 0 0 #666;
+  }
+  
+  .controls .volume > div.fill-2 {
+    box-shadow: inset -1px 0 0 #666;
+  }
+  
+  .controls .volume > div:nth-child(2) {
+    left: 5px;
+  }
+  
+  .controls .volume > div:nth-child(3) {
+    left: 10px;
+  }
+  
+  .controls .volume > div:nth-child(4) {
+    left: 15px;
+  }
+  
+  .controls .volume > div:nth-child(5) {
+    left: 20px;
+  }
+  
+  .controls .volume > div:hover {
+    height: 15px;
+  }
+  
+  /* ==========================================================================
+     Controls: Fullscreen
+     ========================================================================== */
+  
+  .controls .fullscreen {
+    position: relative;
+    width: 12px;
+    height: 100%;
+    margin-left: 10px;
+    font-size: 10px;
+    background: 0 0;
+  }
+  
+  .controls .fullscreen.is-fullscreen .enter-fullscreen {
+    display: none;
+  }
+  
+  .controls .fullscreen:not(.is-fullscreen) .exit-fullscreen {
+    display: none;
+  }
+  
+  .controls .fill {
+    fill: #fff;
+    transition: fill .05s;
+  }
+  
+  .controls .fullscreen:hover .fill,
+  .controls .fullscreen:focus .fill {
+    fill: #fcd667;
+  }
+  
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  
+  .fadeIn {
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+  }
+  
+  .zoomInBackwards {
+    animation: 0.75s 0.3s zoomIn backwards;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(1.05);
+      opacity: 0
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  /* Streamer */
+  .streamer-list{
+    width: 250px;
+    height: 356px;
+    display: flex;
+      flex-direction: column;
+      list-style: none;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, .3);
+      padding-left: 0px;
+      margin: 0;
+      margin-left: 5px;
+  }
+  .streamer1, .streamer2, .streamer3{
+    padding: 5px;
+    background-repeat: no-repeat;
+      opacity: 0.7;
+      cursor: pointer;
+  }
+  .streamer1 img, .streamer2 img, .streamer3 img{
+    border-radius: 5px;
+    width: 240px;
+    height: 105px;
+  }
+  
+  .streamer1.active,
+  .streamer2.active,
+  .streamer3.active{
+      opacity: 1;
+  }
+
+.titles{
+  margin: 3px;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+
+}
+.titles a{
+  color: #000;
+  padding-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.titles2 a{
+  color: #fff;
+  padding-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.titles a:hover{
+  color: #fcd667;
+}
+.titles2 a:hover{
+  color: #fcd667;
+}
+
+.navbar-browseicon{
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+.header-icon > use > svg{
+  fill: #fff;
+}
+
+.logopng{
+  width: 140px;
+  height: 70px;
+}
+
+.bg-modal{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+
+.modal-content{
+  width: 500px;
+  height: 380px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+
+.bg-modal2{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+
+.modal-content2{
+  width: 500px;
+  height: 380px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+.bg-modal3{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+
+.modal-content3{
+  width: 500px;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  font-size: 14px;    
+}
+.bg-modal4{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+.bg-modal5{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+.modal-content5{
+  width: 500px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+.bg-modal6{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+.bg-modal7{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+.bg-modal8{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: hidden;
+  position: fixed;    
+}
+.login{
+  color: #960000;
+  opacity: 0;
+}
+
+#email,
+#login,
+#password{
+    border: 2px solid #000000;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s ease;
+}
+.inputlogin:focus{
+    border-color: #fcd667;
+    box-shadow: 0 0 8px 0 #fcd667;
+}
+
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7,
+.close8{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.inputlogin{
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+.myButton {
+	background-color: #fcd667;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px ;
+	display:inline-block;
+	cursor:pointer;
+	color: #000000;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size:17px;
+	padding:8px 21px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:#ffd24a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#notreg{
+  color: black;
+}
+
+.logoreg{
+  width: 200px;
+  height: 120px;
+  padding: 10px;
+}
